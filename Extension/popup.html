@@ -1,0 +1,158 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+	  <link rel="stylesheet" type="text/css" href="styles/switch.css" />
+	  <!-- JQuery -->
+	  <script src="jquery-2.1.4.min.js"></script>
+
+	  <script href="js/communicator.js"></script>
+	  
+    <title>Happme :)</title>
+    <style>
+        body {
+        	font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        	font-size: 100%;
+        }
+		
+		p {
+			margin: 0;
+		}
+		
+		#container{
+			margin: 0 auto;
+			width: 203px;
+			padding: 0 15px 10px 10px;
+		}
+		
+		#title{
+			margin: 0 auto;
+			text-align: center;
+		}
+		#title h1{
+			float: left;
+		}
+		#title img{
+/*			width: 60px;*/
+			height: 45px;
+			margin-top: 16px;
+			margin-left: 07px;
+		}
+		
+		#filter{
+/*			padding: 10px;*/
+			
+/*			width: 50%;*/
+			margin: 0 auto;
+		}
+		#filter p{
+			float: left;
+			margin-right: 20px;
+			margin-top: 16px;
+		}
+		#filter .onoffswitch{
+			float: right;
+			margin-top: 8px;
+		}
+		
+		#contact input{
+			margin-top: 8px;
+			
+			border: 1px solid gray;
+			border-radius: 6px;
+			
+			padding: 3px;
+			height: 20px;
+			width: 100%;
+		}
+		
+		#triggers ul{
+			list-style: none;
+			padding: 0;
+			padding-left: 25px;
+			padding-top: 15px;
+			margin-bottom: 0;
+			
+			color: gray;
+		}
+		#triggers ul li{
+			padding: 2px 0;
+		}
+		#triggers ul li label{
+			float: left;
+		}
+		#triggers ul li input{
+			float: right;
+		}
+		
+    </style>
+  </head>
+  <body>
+	  <div id="container" >
+	  	  <div id="title">
+			  <h1>Happ<span style="color:#2BA7C3">me</span></h1>
+			  <img src="puppyLogo.png" />
+		  </div>
+
+		  <div id="filter">
+			   <p>Filter Posts?</p>
+			   <div class="onoffswitch">
+				   <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="filterSwitch" unchecked />
+				   <label class="onoffswitch-label" for="filterSwitch">
+					   <span class="onoffswitch-inner"></span>
+					   <span class="onoffswitch-switch"></span>
+				   </label>
+			  </div>
+			  
+			  <div style="clear: both" />
+		  </div>
+		  <div id="triggers">
+			  <p>Triggers:</p>
+			  <div style="clear: both" />
+<!--			   profanity, drug use, sexual assault, child abuse, self-harm violence-->
+			  <ul>
+				  <li>
+					  <label for="profanity">Profanity</label>
+					  <input id="profanity" type="checkbox" name="profanity" />
+				  </li>
+				  <div style="clear: both" />
+				  <li>
+					  <label for="ptsd">PTSD</label>
+					  <input id="PTSD" type="checkbox" name="ptsd" />
+				  </li>
+				  <div style="clear: both" />
+				  <li>
+					  <label for="drug_use">Drug Use</label>
+					  <input id="drugUse" type="checkbox" name="drug_use" />
+				  </li>
+				  <div style="clear: both" />
+				  <li>
+					  <label for="sexual_assault">Sexual Assault</label>
+					  <input id="sexualAssault" type="checkbox" name="sexual_assault" />
+				  </li>
+				  <div style="clear: both" />
+				  <li>
+					  <label for="child_abuse">Child Abuse</label>
+					  <input id="childAbuse" type="checkbox" name="child_abuse" />
+				  </li>
+				  <div style="clear: both" />
+				  <li>
+					  <label for="self-harm">Self-harm</label>
+					  <input id="self-harm" type="checkbox" name="self-harm" />
+				  </li>
+				  <div style="clear: both" />
+			  </ul>
+		  </div>
+		  <div id="contact">
+			  <p>Contact Email:</p>
+			  <input id="contactEmail" type="email" />
+		  </div>
+	  </div>
+	  
+	  <script src="js/communicator.js"></script>
+  </body>
+</html>
